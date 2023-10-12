@@ -1,5 +1,4 @@
-// Sample node.js web app for Pluralsight Docker CI course
-// For demonstration purposes only
+// Sample node.js web app for Getting Started with Docker book
 'use strict';
 
 var express = require('express'),
