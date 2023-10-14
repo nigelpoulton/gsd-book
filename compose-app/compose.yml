@@ -6,9 +6,8 @@ volumes:
   
 services:
   web-fe:
-   # build: .
-    image: docker-init-web-fe:latest
-   # command: python app.py 
+    build: .
+    command: python app.py 
     ports:
       - target: 8080
         published: 5005
