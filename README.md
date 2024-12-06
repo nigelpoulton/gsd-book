@@ -1,6 +1,6 @@
 # README
 
-Repo for Getting Started with Docker (...and AI) book.
+Repo for [Getting Started with Docker (...and AI)](https://www.amazon.com/dp/1916585302) book.
 
 Folders:
 
