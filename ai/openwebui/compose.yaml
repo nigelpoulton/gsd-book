@@ -1,0 +1,22 @@
+volumes:
+  open-webui:
+
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    ports:
+      - "3001:8080"
+    environment:
+      - OPENAI_API_KEY=na
+      - OPENAI_API_BASE_URL=http://model-runner.docker.internal/engines/v1
+    volumes:
+      - open-webui:/app/backend/data
+    restart: always
+    depends_on:
+      - dmr
+
+  dmr:
+    provider:
+      type: model
+      options:
+        model: ${MODEL_NAME}

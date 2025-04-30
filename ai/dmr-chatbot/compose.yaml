@@ -1,0 +1,24 @@
+services:
+  frontend:
+    image: nigelpoulton/gsd-book:dmr-fe
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - backend
+
+  backend:
+    image: nigelpoulton/gsd-book:dmr-be
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env    
+    depends_on:
+      - dmr
+  
+  dmr:
+    provider:
+      type: model
+      options:
+        model: ${LLM_MODEL_NAME}
